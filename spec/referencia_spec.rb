@@ -36,6 +36,17 @@ describe Referencia do
             @lista.push(@nodo4)
             expect(@lista.first).to eq(@nodo4)
         end
+        
+        it "Se pueden insertar varios elementos" do
+            @lista.push(@nodo5)
+            @lista.push(@nodo4)
+            @lista.push(@nodo3)
+            expect(@lista.first).to eq(@nodo3)
+            @lista.ext
+            expect(@lista.first).to eq(@nodo4)
+            @lista.ext
+            expect(@lista.first).to eq(@nodo5)
+        end
     end
     
     
