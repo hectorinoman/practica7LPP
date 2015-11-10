@@ -1,24 +1,19 @@
-
-Nodo = Struct.new(:value, :next_node, :prev_node)
-
-class Nodo
-    include Comparable
+class Bibliografia
     
-    def <=>(other)
-		 @level <=> other.level
-	end
-end
+    attr_accessor :autor, :titulo, :serie, :editorial, :edicion, :fecha, :isbn
     
-class Lista
-    include Enumerable
-   
-
-    attr_accessor :head, :value, :next_node, :tail, :prev_node, 
-
-    def initialize
-        @head = nil
-        @tail = nil
-    
+    def initialize(autor, titulo, serie, editorial, edicion, fecha, isbn)
+        @autor = autor
+        @titulo = titulo
+        @serie = serie
+        @editorial = editorial
+        @edicion = edicion
+        @fecha = fecha
+        @isbn = isbn
     end
     
+    def to_s
+        "(#{@autor},#{@titulo},#{@serie},#{@editorial},#{@edicion},#{@fecha},#{@isbn})"
+    end
+
 end
