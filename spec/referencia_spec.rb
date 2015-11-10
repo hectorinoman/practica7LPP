@@ -31,7 +31,13 @@ describe Referencia do
             @lista.push(@nodo4)
             expect(@lista.first).to eq(@nodo4)
         end
+        
+        it "Se puede insertar un elemento" do
+            @lista.push(@nodo4)
+            expect(@lista.first).to eq(@nodo4)
+        end
     end
+    
     
 
 end
