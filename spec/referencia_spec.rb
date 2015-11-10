@@ -47,6 +47,11 @@ describe Referencia do
             @lista.ext
             expect(@lista.first).to eq(@nodo5)
         end
+        
+        it "Debe existir una lista con su cabeza" do
+            @lista.push(@nodo1)
+            expect(@lista.first).to eq(@nodo1)
+        end
     end
     
     
