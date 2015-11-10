@@ -29,7 +29,8 @@ describe Referencia do
         it "Se extrae el primer elemento de la lista" do
             @lista.push(@nodo5)
             @lista.push(@nodo4)
-            expect(@lista.first).to eq(@nodo4)
+            @lista.ext
+            expect(@lista.first).to eq(@nodo5)
         end
         
         it "Se puede insertar un elemento" do
