@@ -18,13 +18,20 @@ describe Referencia do
         @lista = Lista.new(0)
     end  
     
-    context "Nodo" do
+    context "Node" do
         it "Debe existir un Nodo de la lista con sus datos y su siguiente" do
             expect(@nodo1.value).to eq(@referencia1)
             expect(@nodo1.next).to eq(nil)
         end
-    end 
+    end
     
+    context "List" do
+        it "Se extrae el primer elemento de la lista" do
+            @lista.push(@nodo5)
+            @lista.push(@nodo4)
+            expect(@lista.first).to eq(@nodo4)
+        end
+    end
     
 
 end
