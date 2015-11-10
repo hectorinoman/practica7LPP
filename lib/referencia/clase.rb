@@ -9,3 +9,16 @@ class Nodo
 	end
 end
     
+class Lista
+    include Enumerable
+   
+
+    attr_accessor :head, :value, :next_node, :tail, :prev_node, 
+
+    def initialize
+        @head = nil
+        @tail = nil
+    
+    end
+    
+end
